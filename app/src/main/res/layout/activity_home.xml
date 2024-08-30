@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#6D77F9"
+    tools:context=".home">
+
+
+  <RelativeLayout
+      android:id="@+id/main_toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/purple_halka"
+      android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/main_search_btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/baseline_search_24"
+        app:tint="@color/white" />
+
+  </RelativeLayout>
+
+  <FrameLayout
+      android:id="@+id/main_frame_layout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_above="@id/divider"
+      android:layout_below="@id/main_toolbar">
+
+  </FrameLayout>
+
+  <com.google.android.material.divider.MaterialDivider
+      android:id="@+id/divider"
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_above="@+id/bottomnavigate" />
+
+  <com.google.android.material.bottomnavigation.BottomNavigationView
+      android:id="@+id/bottomnavigate"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:background="?attr/selectableItemBackgroundBorderless"
+      app:menu="@menu/bottomnavigate">
+
+<!--    <Button-->
+<!--        android:id="@+id/aibtn"-->
+<!--        android:background="@drawable/roundcorenerbutton"-->
+
+<!--        android:layout_marginLeft="167dp"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        android:textSize="21dp"-->
+<!--        android:layout_width="70dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:text="AI" />-->
+  </com.google.android.material.bottomnavigation.BottomNavigationView>
+</RelativeLayout>

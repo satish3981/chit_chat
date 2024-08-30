@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/chatbackground"
+    tools:context=".aichat">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_halka"
+        android:padding="10dp"
+        android:id="@+id/toolbar">
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_arrow_back_ios_new_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/aibackbtn"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AI CHIT-CHAT "
+            android:id="@+id/other_username"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@id/aibackbtn"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_marginTop="65dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tVResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="21dp"
+            android:text=" "/>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:padding="8dp"
+        android:id="@+id/bottom_layout">
+
+        <EditText
+            android:id="@+id/eTPrompt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toLeftOf="@+id/btnSubmit"
+            android:background="@drawable/round_edge_white"
+            android:elevation="4dp"
+            android:hint="Write message here..."
+            android:padding="10dp" />
+
+<!--        <Button-->
+<!--            android:id="@+id/btnSubmit"-->
+<!--            android:layout_width="48dp"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:background="?attr/selectableItemBackgroundBorderless"-->
+<!--            android:padding="8dp"-->
+<!--            android:src="@drawable/send_vector"-->
+<!--            app:tint="@color/purple_halka" />-->
+<!--        <Button-->
+<!--            android:id="@+id/btnSubmit"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:background="@drawable/aisend"-->
+<!--            android:backgroundTint="#6D77F9"-->
+<!--            android:padding="8dp" />-->
+        <ImageButton
+            android:id="@+id/btnSubmit"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/aisend"
+            android:backgroundTint="#6D77F9"
+            android:padding="8dp"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
